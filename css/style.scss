@@ -1,0 +1,125 @@
+$Roboto:'Roboto', sans-serif;
+
+.content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+body {
+  background-color: #FCFC62;
+}
+/*First start*/
+.First__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+.First__search {
+  form {
+    margin-left: 113px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+      width: 520px;
+      height: 53px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 2px solid #000000;
+      border-radius: 30px;
+      font-family: $Roboto;
+      font-size: xx-large;
+    }
+    button {
+      position: absolute;
+      width: 29px;
+      background: transparent;
+      border: none;
+      display: none;
+    }
+  }
+}
+.First__sign-in {
+  background: #7B80FC;
+  border: 1px solid #E6CDCD;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 165px;
+  height: 53px;
+  font-family: $Roboto;
+  font-size: 24px;
+  &:hover {
+    background: #5E2BFF;
+    box-shadow: 2px 2px 20px #000000a1;
+  }
+}
+/*First end*/
+/*Second start*/
+.Second {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 75px;
+  min-height: 600px ;
+}
+.Second__container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.Second__common, .Second__select {
+  font-family: $Roboto;
+  width: 50%;
+  text-align: center;
+  h3 {
+    font-size: 30px
+  }
+  ul{
+    list-style: none;
+    display: none;
+  }
+  background: #FDFFFC;
+  border: 4px solid #02020A;
+  border-radius: 10px;
+}
+.Second__common {
+  margin-right: 10px;
+}
+.Second__select {
+  margin-left: 10px;
+}
+.Second__map {
+  width: 50%;
+  margin-left: 26px;
+  background: #FDFFFC;
+  border: 4px solid #02020A;
+  border-radius: 10px;
+}
+/*Second end*/
+/*Third start*/
+.Third {
+  margin-bottom: 24px;
+}
+.Third__container {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    font-family: $Roboto;
+    font-size: 20px;
+    text-align: center;
+
+    background: #FDFFFC;
+    border: 2px solid #02020A;
+    border-radius: 30px;
+    padding: 19px 38px;
+    &:hover {
+      background: #5E2BFF;
+      box-shadow: 2px 2px 20px #000000a1;
+    }
+  }
+}
+.Third__update {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+/*Third end*/
