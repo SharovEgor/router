@@ -1,29 +1,45 @@
+var koordinat= ['Москва', 'Тверь'];
+var kor2=[];
+var myMap;
 function init () {
   
-    var multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: ["Москва", "Тверь"]
-    }, {
-        // Тип промежуточных точек, которые могут быть добавлены при редактировании.
-        editorMidPointsType: "via",
-        // В режиме добавления новых путевых точек запрещаем ставить точки поверх объектов карты.
-        editorDrawOver: false
-    });
-
-
-    
-
- 
-
     // Создаем карту с добавленной на нее кнопкой.
-    var myMap = new ymaps.Map('Map', {
+    myMap = new ymaps.Map('Map', {
         center: [56.399625, 36.71120],
         zoom: 7
       
     });
 
     // Добавляем мультимаршрут на карту.
-    myMap.geoObjects.add(multiRoute);
+    
+//создаём элемент для обработки кнопки update
+    document.getElementById('update').onclick = function () {
+        var multiRoute = new ymaps.multiRouter.MultiRoute({
+            referencePoints: koordinat
+                   
+        }, {
+            // Тип промежуточных точек, которые могут быть добавлены при редактировании.
+            editorMidPointsType: "via",
+            // В режиме добавления новых путевых точек запрещаем ставить точки поверх объектов карты.
+            editorDrawOver: false
+        });
+        if(koordinat !=kor2){
+        myMap.geoObjects.add(multiRoute);
+        kor2= koordinat
+       };
+    };
+
+    //обработка кнопки удаление карты
+   document.getElementById('clear').onclick= function () {
+   myMap.destroy(); //уничтожение карты 
+    myMap = new ymaps.Map('Map', {//создание картыч
+    center: [56.399625, 36.71120],
+    zoom: 7
+  
+});
+   }
 }
+
 
 ymaps.ready(init);
 
