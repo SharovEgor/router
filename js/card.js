@@ -3,14 +3,14 @@ var kor2=[];
 var myMap;
 function init () {
   
-    // Создаем карту с добавленной на нее кнопкой.
+    // Создаем карту
     myMap = new ymaps.Map('Map', {
         center: [56.399625, 36.71120],
         zoom: 7
       
     });
 
-    // Добавляем мультимаршрут на карту.
+
     
 //создаём элемент для обработки кнопки update
     document.getElementById('update').onclick = function () {
